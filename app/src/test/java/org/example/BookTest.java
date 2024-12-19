@@ -7,10 +7,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
-    @Test void testBookConstructor() {
-        Book book = new Book("1984", "George Orwell", 1949);
+    @Test
+    void testBookConstructor() {
+        // Arrange
+        Book book = new Book("1984", "George Orwell", 9780451524935L);
+
+        // Assert
         assertEquals("1984", book.getTitle());
         assertEquals("George Orwell", book.getAuthor());
-        assertEquals(1949, book.getYearPublished());
+        assertEquals(9780451524935L, book.getISBN());
     }
 }
